@@ -1,0 +1,36 @@
+<div class="row">
+   <div class="blog-column">
+      {% for article in blogs.news.articles%}
+      <div class="card">
+         <h2 class="article-title">
+            <a
+               href="{{ article.url }}"
+               title="{{ article.title | escape }}"
+               itemprop="url"
+               >{{ article.title }}</a
+               >
+         </h2>
+         <h5 class="article-meta">by <span itemprop="author">Jairo Py</span> 
+         </h5>
+         <a href="{{ article.url }}"> 
+         <img
+            src="{{ article.image.src | img_url: '400x400', crop: 'bottom' }}"
+            alt="{{ article.image.alt }}"
+            />
+         </a>
+         <p>{{ article.content | strip_html | strip_newlines | truncate: 90 }}</p>
+         <a
+            href="{{ article.url }}"
+            class="article-read-more"
+            title="Continue Reading"
+            itemprop="url"
+            >Continue Reading <span class="fa fa-angle-right"></span
+            ></a>
+         </p>
+      </div>
+      {% endfor %}
+      <!--card-->
+   </div>
+   <!--column-->
+</div>
+<!--row-->
