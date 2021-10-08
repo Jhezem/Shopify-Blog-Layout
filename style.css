@@ -1,0 +1,44 @@
+h2 {
+	color: #000000;
+	margin: 1.5 0px;
+}
+
+.blog-column {
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: stretch;
+}
+
+.card {
+	padding: 20px;
+	background-color: #ffffff;
+	margin-top: 20px;
+}
+
+.card img {
+	width: 100%;
+}
+
+.blog-column .card img {
+	margin-bottom: 10px;
+}
+
+.blog-column .card img {
+	width: 100%;
+}
+
+.article-title {
+	color: #662d91;
+}
+
+
+/*responsive */
+
+@media (max-width: 800px) {
+	.blog-column {
+		display: grid;
+		grid-template-columns: repeat(1, auto);
+		align-items: stretch;
+	}
+}
